@@ -39,7 +39,7 @@ class NoteController extends Controller
                                                       ->with('listEmployee', $listEmployee);
         } else {
             $params['SoCong'] = '';
-            $this->timekeepingServices->update($params);
+            $this->timekeepingServices->updateNote($params);
             $listNotes = $this->timekeepingServices->listNotes($params);
             $listEmployee = $this->employeeServices->listEmployee();
             return view('layouts.Admin.TimeKeeping.FormNote')->with('listNotes', $listNotes)

@@ -69,7 +69,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
         Route::post('', 'StoreController@store')->name('employee.store');
     });
 
-    Route::group(['prefix' => 'timekeeping', 'namespace' => 'TimeKeeping'], function () {
+    Route::group(['prefix'=>'timekeeping', 'namespace'=>'TimeKeeping', 'middleware'=>['auth', 'manager-role']], function () {
 
         Route::get('', 'MainController@index');
 

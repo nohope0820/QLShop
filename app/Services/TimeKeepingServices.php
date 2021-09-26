@@ -28,6 +28,11 @@ class TimeKeepingServices
         return $this->TimeKeepingRepository->checkTimeKeeping($params);
     }
 
+    public function checkSoCong(array $params)
+    {
+        return $this->TimeKeepingRepository->checkSoCong($params);
+    }
+
     public function listByDate($date)
     {
         return $this->TimeKeepingRepository->listByDate($date);
@@ -43,9 +48,14 @@ class TimeKeepingServices
         return $this->TimeKeepingRepository->salaryPerEmployee($params);
     }
 
-    public function update(array $params)
+    public function updateNote(array $params)
     {
-        return $this->TimeKeepingRepository->update($params);
+        return $this->TimeKeepingRepository->updateNote($params);
+    }
+
+    public function updateSoCong(array $params)
+    {
+        return $this->TimeKeepingRepository->updateSoCong($params);
     }
 
     public function listNotes()

@@ -59,7 +59,7 @@
    <div class="show_form_note">
     <form method="POST" action="{{ route('timekeeping.note') }}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover" style="color: black;">
             <tr>
                 <td><b style="color: black;">Chọn tên nhân viên  </b></td>
                 <td><select name="MaNV" style="padding: 2px 20px">

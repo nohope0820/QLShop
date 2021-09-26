@@ -24,11 +24,17 @@ class StoreController extends Controller
         $params['MaNV'] = $id;
         $params['note'] = ' ';
         $check = $this->timekeepingServices->checkTimeKeeping($params);
+        $checkSoCong = $this->timekeepingServices->checkSoCong($params);
         if ($check == 0) {
             $this->timekeepingServices->store($params);
             return redirect(url('admin/timekeeping'));
         } else {
-            return redirect(url('admin/timekeeping'))->with('alert', 'Bạn đã chấm công hôm nay cho người này rồi');
+            if ($checkSoCong == 1) {
+                $this->timekeepingServices->updateSoCong($params);
+                return redirect(url('admin/timekeeping'));
+            } else {
+                return redirect(url('admin/timekeeping'))->with('alert', 'Bạn đã chấm công hôm nay cho người này rồi');
+            }
         }
     }
 

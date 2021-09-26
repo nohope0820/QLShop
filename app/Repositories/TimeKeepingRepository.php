@@ -19,10 +19,16 @@ class TimeKeepingRepository extends Repository
         $this->timekeeping->create($params);
     }
 
-    public function update($params)
+    public function updateNote($params)
     {
         return $this->timekeeping->where([['MaNV', '=', $params['MaNV']], ['working_day', '=', $params['working_day']]])
                           ->update(['note' => $params['note']]);
+    }
+
+    public function updateSoCong($params)
+    {
+        return $this->timekeeping->where([['MaNV', '=', $params['MaNV']], ['working_day', '=', $params['working_day']]])
+                          ->update(['SoCong' => $params['SoCong']]);
     }
 
     public function listNotes()
@@ -47,6 +53,15 @@ class TimeKeepingRepository extends Repository
     {
         $check = $this->timekeeping
                       ->where([['MaNV', '=', $params['MaNV']], ['working_day', '=', $params['working_day']]]);
+        return $check->count();
+    }
+
+    public function checkSoCong($params)
+    {
+        $check = $this->timekeeping
+                      ->where([['MaNV', '=', $params['MaNV']],
+                               ['working_day', '=', $params['working_day']],
+                               ['SoCong', '=', '']]);
         return $check->count();
     }
 
