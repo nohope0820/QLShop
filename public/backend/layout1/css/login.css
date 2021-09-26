@@ -1,0 +1,56 @@
+html
+{
+	background: #e9edf3;
+}
+body
+{
+	margin: auto;
+	margin-top: 85px;
+	border:2px solid pink;
+	border-radius: 10px;
+	padding: 15px;
+	width: 900px;
+	display: flex;
+}
+.div1
+{
+	width: 400px;
+}
+.content{
+	margin-top: 60px;
+}
+hr{
+background:green;
+height: 1.5px;
+width: 250px;
+margin-left: 75px;
+margin-top: 5px;}
+
+.name-content
+{
+	font-size: 16px;
+	margin-left: -110px;
+}
+.name-content:hover{color: green;
+text-decoration: underline;}
+.row
+{
+	margin-left: -105px;
+}
+.col-md-9{
+	margin-left: -150px;
+	margin-right: 0px;
+	margin-top: 10px;
+width: 350px;}
+
+.checkbox
+{
+	margin-left: -210px;
+	margin-top: 7px;
+}
+.helper-text{
+	margin-top: 5px;
+	margin-left: -150px;
+}
+.div2 > img{width: 500px; height: 450px; margin-top: -15px; margin-left: -18px;}
+.div2 .content-text>.heading{font-size: 20px;}
