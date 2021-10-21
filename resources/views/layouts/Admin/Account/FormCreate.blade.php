@@ -53,7 +53,7 @@
                     <select name="role" style="padding: 5px 25px">
                         <option value="1">Quản trị viên</option>
                         <option value="2">Quản lý</option>
-    
+                        <option value="3">Nhân viên</option>
                     </select>
                 </div>
             </div>

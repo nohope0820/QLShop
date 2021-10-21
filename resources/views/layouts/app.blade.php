@@ -110,26 +110,26 @@
             <div class="sidebar-scroll">
                 <nav>
                     <ul class="nav">
-                        <li><a href="index.php" class=""><i class="lnr lnr-home"></i> <span>Bảng điều khiển</span></a></li>        
-                        <li><a href="index.php?controller=news" class=""><i class="lnr lnr-alarm"></i> <span>Tin tức</span></a></li>
-                        <li class="click"><a href="{{ url('admin/category') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Danh mục sản phẩm</span></a></li>
-                        <li class="click"><a href="{{ url('admin/products/view') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Danh sách sản phẩm</span></a></li>
-                        <li class="click"><a href="{{ url('admin/promotions/view') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Banner quảng cáo</span></a></li>
-                        <li><a href="{{ url('admin/orders/view') }}"><i class="lnr lnr-chart-bars"></i> <span>Đơn hàng</span></a> </li>
-                        <li><a href="{{ url('admin/timekeeping') }}"><i class="lnr lnr-chart-bars"></i> <span>Chấm công</span></a> </li>
-                        <li class="click"><a href="{{ url('admin/employee') }}" class=""><i class="lnr lnr-code"></i> <span>Quản lý nhân viên</span></a></li>
-                        <li class="click"><a href="{{ url('admin/account') }}" class=""><i class="lnr lnr-code"></i> <span>Quản lý tài khoản</span></a></li>
-
-                        <li>
-                            <a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Trang</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-                            <div id="subPages" class="collapse ">
-                                <ul class="nav">
-                                    <li><a href="page-profile.html" class="">Hồ sơ</a></li>
-                                    <li><a href="index.php?controller=login&action=logout" class="">Login</a></li>
-                                    
-                                </ul>
-                            </div>
-                        </li>
+                        @if ( Auth::user()->role == 3)
+                            <li><a href="{{ url('home') }}" class=""><i class="lnr lnr-home"></i> <span>Bảng điều khiển</span></a></li>        
+                            <li><a href="index.php?controller=news" class=""><i class="lnr lnr-alarm"></i> <span>Chấm công - Lương</span></a></li>
+                        @elseif (Auth::user()->role == 1)
+                            <li><a href="{{ url('home') }}" class=""><i class="lnr lnr-home"></i> <span>Bảng điều khiển</span></a></li>        
+                            <li><a href="index.php?controller=news" class=""><i class="lnr lnr-alarm"></i> <span>Tin tức</span></a></li>
+                            <li class="click"><a href="{{ url('admin/category') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Danh mục sản phẩm</span></a></li>
+                            <li class="click"><a href="{{ url('admin/product') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Danh sách sản phẩm</span></a></li>
+                            <li><a href="{{ url('admin/order') }}"><i class="lnr lnr-chart-bars"></i> <span>Đơn hàng</span></a> </li>
+                        @else
+                            <li><a href="{{ url('home') }}" class=""><i class="lnr lnr-home"></i> <span>Bảng điều khiển</span></a></li>        
+                            <li><a href="index.php?controller=news" class=""><i class="lnr lnr-alarm"></i> <span>Tin tức</span></a></li>
+                            <li class="click"><a href="{{ url('admin/category') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Danh mục sản phẩm</span></a></li>
+                            <li class="click"><a href="{{ url('admin/product') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Danh sách sản phẩm</span></a></li>
+                            <li><a href="{{ url('admin/order') }}"><i class="lnr lnr-chart-bars"></i> <span>Đơn hàng</span></a> </li>
+                            <li class="click"><a href="{{ url('admin/employee') }}" class=""><i class="lnr lnr-code"></i> <span>Quản lý nhân viên</span></a></li>
+                            <li class="click"><a href="{{ url('admin/account') }}" class=""><i class="lnr lnr-code"></i> <span>Quản lý tài khoản</span></a></li>
+                            <li><a href="{{ url('admin/timekeeping') }}"><i class="lnr lnr-chart-bars"></i> <span>Chấm công</span></a> </li>
+                        @endif
+                        
                     </ul>
                 </nav>
             </div>

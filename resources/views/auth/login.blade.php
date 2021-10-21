@@ -47,7 +47,7 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div style="border: 4px solid green; width: 178px; margin: auto; padding: 3px 15px;"><a href="{{ url('home') }}"><img src="{{ asset('view/login/images/logo.jpg') }}" width="140"></a></div>
+                        <div style="border: 4px solid green; width: 178px; margin: auto; padding: 3px 15px;"><a href="{{ url('admin') }}"><img src="{{ asset('view/login/images/logo.jpg') }}" width="140"></a></div>
                         <span class="login100-form-title p-b-49" style="font-size: 16px; font-family: times new roman; font-weight: bold; padding-top: 25px;">
                           ĐĂNG NHẬP
                         </span>

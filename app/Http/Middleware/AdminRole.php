@@ -16,9 +16,9 @@ class AdminRole
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::user()->role!=config('const.USER.ROLE.ADMIN')) {
-            return redirect('home');
+        if (Auth::user()->role==config('const.USER.ROLE.MANAGER') || Auth::user()->role==config('const.USER.ROLE.ADMIN')) {
+            return $next($request);
         }
-        return $next($request);
+        return redirect('home')->with('alert', 'Bạn không có quyền truy cập vào chức năng này');
     }
 }
