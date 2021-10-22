@@ -63,6 +63,7 @@ class StoreController extends Controller
         $params = $this->getParams($request);
         $params['order_id'] = $orderId;
         $this->orderServices->storeProduct($params);
+        // $this->orderServices->reduceProduct($params);
         return redirect(url('admin/order/xac-nhan-don-hang', ['id' => $orderId]));
     }
 

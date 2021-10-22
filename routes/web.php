@@ -127,10 +127,6 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
 
         Route::get('/chi-tiet-don-hang/{id}', 'MainController@detail');
 
-        Route::get('/{online}', 'MainController@type');
-
-        Route::get('/{offline}', 'MainController@type');
-
         Route::get('/tao-don-hang', 'StoreController@index');
 
         Route::post('/tao-don-khach-quen', 'StoreController@familiarCustomer')->name('order.familiarCustomer');
@@ -144,5 +140,9 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
         Route::post('/add-product-in-order/{id}', 'StoreController@storeProduct')->name('order.storeProduct');
 
         Route::get('/update-product/{id}-{total}', 'StoreController@update');
+
+        Route::get('/{online}', 'MainController@type');
+
+        Route::get('/{offline}', 'MainController@type');
     });
 });

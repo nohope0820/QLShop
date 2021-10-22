@@ -38,7 +38,7 @@ class StoreController extends Controller
     {
         return Validator::make($request->all(), [
             'name' => 'bail|required|min:10|max:100',
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255'],
             'password' => ['required', 'string', 'min:8'],
             'confirm_password' => ['required', 'string', 'min:8', 'same:password'],
         ]);

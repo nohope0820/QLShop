@@ -125,6 +125,8 @@
                             <li class="click"><a href="{{ url('admin/category') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Danh mục sản phẩm</span></a></li>
                             <li class="click"><a href="{{ url('admin/product') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Danh sách sản phẩm</span></a></li>
                             <li><a href="{{ url('admin/order') }}"><i class="lnr lnr-chart-bars"></i> <span>Đơn hàng</span></a> </li>
+                            <li class="click"><a href="{{ url('admin/employee') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Quản lý kho hàng</span></a></li>
+                            <li class="click"><a href="{{ url('admin/employee') }}" class=""><i class="lnr lnr-code"></i> <span>Quản lý khách hàng</span></a></li>
                             <li class="click"><a href="{{ url('admin/employee') }}" class=""><i class="lnr lnr-code"></i> <span>Quản lý nhân viên</span></a></li>
                             <li class="click"><a href="{{ url('admin/account') }}" class=""><i class="lnr lnr-code"></i> <span>Quản lý tài khoản</span></a></li>
                             <li><a href="{{ url('admin/timekeeping') }}"><i class="lnr lnr-chart-bars"></i> <span>Chấm công</span></a> </li>

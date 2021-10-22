@@ -2,11 +2,7 @@
 @section("do-du-lieu-order")
 <div class="col-md-12"> 
     <div style="margin-bottom:5px;">
-        <div style="color: black; font-size: 17px; text-decoration: underline; font-weight:bold">Thống kê hóa đơn sản phẩm</div>
-        <div style=" color: black; font-size: 15px; margin-top: 15px; margin-bottom: 15px;">
-            <form method="post" enctype="multipart/form-data" action="index.php?controller=statistical&action=detail">
-        Từ <input type="date" name="start"> đến <input type="date" name="finish"> <input type="submit" value="Thống kê">
-         </form></div>
+    
     <div class="panel panel-primary" style="border-color: green;">
         <div class="panel-heading" style="background-color: gray;">Danh sách đơn hàng</div>
         <div class="panel-body">

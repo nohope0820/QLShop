@@ -4,18 +4,21 @@ namespace App\Repositories;
 
 use App\Models\Order;
 use App\Models\Orderdetail;
+use App\Models\ProductSize;
 use Illuminate\Support\Facades\DB;
 
 class OrderRepository extends Repository
 {
     protected $order;
     protected $orderdetail;
+    protected $productSize;
     // protected $friend;
 
-    public function __construct(Order $order, Orderdetail $orderdetail)
+    public function __construct(Order $order, Orderdetail $orderdetail, ProductSize $productSize)
     {
         $this->order = $order;
         $this->orderdetail = $orderdetail;
+        $this->productSize = $productSize;
     }
 
     public function store($params)
@@ -27,6 +30,13 @@ class OrderRepository extends Repository
     {
         $this->orderdetail->create($params);
     }
+
+    // public function reduceProduct($params)
+    // {
+    //     // $this->orderdetail->create($params);
+    //     $slco = $this->productSize->where([['product_id', '=', $params['product_id']], ['size', '=', $params['size']]])
+    //                               ->select('slco')->get();
+    // }
 
     public function update($orderId, $total)
     {

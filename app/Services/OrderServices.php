@@ -28,6 +28,11 @@ class OrderServices
         return $this->OrderRepository->storeProduct($params);
     }
 
+    // public function reduceProduct(array $params)
+    // {
+    //     return $this->OrderRepository->reduceProduct($params);
+    // }
+
     public function update($orderId, $total)
     {
         return $this->OrderRepository->update($orderId, $total);

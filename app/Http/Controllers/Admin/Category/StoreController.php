@@ -41,7 +41,7 @@ class StoreController extends Controller
     private function getValidator(Request $request)
     {
         return Validator::make($request->all(), [
-            'name' => 'bail|required|min:10|max:100|unique:categories',
+            'name' => 'bail|required|min:5|max:100',
             'description' => ['required', 'string', 'max:255'],
         ]);
     }
